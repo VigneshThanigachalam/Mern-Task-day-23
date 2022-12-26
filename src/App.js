@@ -8,18 +8,19 @@ function App() {
     const [mark, setMark] = useState("");
     const [id, setId] = useState(1);
     const [btnlabel, setbtnlabel] = useState("ADD");
-    const rows = [];
+const rows=[]
     const [arr, setarr] = useState(rows);
     const [id_update, setId_update] = useState(0);
-    const update = (name, mark) => {
+    const update = (id,name, mark) => {
         // setMark(mark);
         // setName(name);
         const data = arr.map((up) => {
-            console.log(id);
             if (up.id === id_update) {
-                return { ...up, name: name, mark: mark, id: id_update };
+                return { ...up, name: name, mark:mark};
             }
+            return up;
         });
+        console.log(data)
         setarr(data);
         setName("");
         setMark("");

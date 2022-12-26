@@ -62,7 +62,7 @@ export const SearchBar = (prop) => {
                             onClick={(e) =>
                                 e.target.value === "ADD"
                                     ? add()
-                                    : prop.update(prop.name, prop.mark)
+                                    : prop.update(prop.id,prop.name, prop.mark)
                             }
                             value={prop.btnlabel}
                         >
